@@ -22,6 +22,7 @@ function startGame() {
     }
 
     document.getElementById("board").innerHTML = insertBlocks;
+    document.getElementById("header").className = "hide";
     points = [0, 0];
     turn = 0;
     gameOver = false;
@@ -29,6 +30,7 @@ function startGame() {
     players[1] = document.getElementById("userName2").value;
     addScore();
     event.preventDefault();
+    
     document.getElementById("header-name").innerText = "It's " + players[turn] + "'s Turn";
     document.getElementById("board").className = "show";
     document.getElementById("score-table").className = "show";

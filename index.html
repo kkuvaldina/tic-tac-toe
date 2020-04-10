@@ -3,29 +3,35 @@
 <head>
 <title>Tic Tac Toe</title>
   <meta charset="UTF-8">
-  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/resetCss.css"/>
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
   <script src="js/script.js"></script>
  </head>
  <body>
-   <div class="header">
-    <h2 id="header-name">Tic Tac Toe</h2>
-    <form action="javascript:void(0);" onsubmit="startGame();" method="post">
-      <label for="userName1">Enter player #1 </label>
+  <h2 id="header-name">Tic Tac Toe</h2>
+   <div id="header">
+    <form id="name-form" action="javascript:void(0);" onsubmit="startGame();" method="post">
+      <label class="label" for="userName1">Enter player #1 </label>
       <input type="text" id="userName1">
-      <label for="userName2">Enter player #2 </label>
+      <label class="label" for="userName2">Enter player #2 </label>
       <input type="text" id="userName2">
       <button class="show" type="button" onclick="startGame();" id="submit-players">Submit</button>
-      <button class="hide" type="button" onclick="startGame();" id="start-again">Play Again?</button>
     </form>
+    </div>
+    <div id="score-and-board">
+    <div class="score-and-button">
     <div id="score-table" class="hide">
       <span id="score-header"></span>
       <span id="score-1"></span>
       <span id="score-2"></span>
       <span id="score-3"></span>
     </div>
+    <button class="hide" type="button" onclick="startGame();" id="start-again">Play Again?</button>
     </div>
     <div id="board" class="hide">
+    </div>
     </div>
  </body>
 </html>
